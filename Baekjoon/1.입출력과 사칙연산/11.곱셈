@@ -1,0 +1,8 @@
+a, b = input(), input()
+result = 0
+c = 1
+for i in reversed(range(len(b))):
+    result += int(b[i])*int(a)*c
+    c = c*10
+    print(int(b[i])*int(a))
+print(result)
