@@ -1,0 +1,9 @@
+import sys
+num, std = sys.stdin.readline().split(' ')
+seq = sys.stdin.readline().split(' ')
+result = ''
+
+for i in seq:
+    if int(i) < int(std):
+        result += i+' '
+print(result)
