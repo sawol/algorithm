@@ -1,0 +1,8 @@
+import sys
+while 1:
+    A, B = sys.stdin.readline().split(' ')
+    A, B = int(A), int(B)
+    if A != 0 and B != 0:
+        print(A+B)
+    else:
+        break
