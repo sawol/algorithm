@@ -1,3 +1,4 @@
+1.
 suga = int(input())
 x = suga//3 # 3킬로 최대 봉투 개수
 y = suga//5 # 5카로 최대 봉투 개수
@@ -10,3 +11,18 @@ if not tmp:
     print(-1)
 else:
     print(min(tmp))
+
+2.
+suga = int(input())
+bag = 0
+
+while suga > 0:
+    if suga%5 == 0: # 설탕이 5의 배수라면
+        bag += suga // 5
+        print(bag)
+        break
+    else:
+        suga -= 3 # 3킬로 추가
+        bag += 1
+else:
+    print(-1)
