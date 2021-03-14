@@ -12,5 +12,5 @@ for p in range(N-1, -1, -1):
     for q in range(N-1, p, -1):
         if arr[p] > arr[q]:
             dp2[p] = max(dp2[p], dp2[q]+1)
-​
+
 print(max([dp1[i]+dp2[i]-1 for i in range(N)]))
