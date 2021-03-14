@@ -12,3 +12,4 @@ def dp():
     
 for q in range(int(input())):
     dp()
+# 추가한 코드입니다.
