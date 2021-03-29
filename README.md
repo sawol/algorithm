@@ -37,3 +37,10 @@ True = 1, False = 0
 <https://dojang.io/mod/page/view.php?id=2461>
 
 </details>
+
+<details>
+    <summary>예외 처리를 잊지말자</summary>
+
+'분명 맞는데 왜 틀리지?' 라는 생각이 들면 백이면 백, 예외처리가 안되어서 그렇다. 입력값 범위에 '0'이나 'null'이 포함되는지 확인해보자.
+
+</details>
