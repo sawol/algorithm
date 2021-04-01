@@ -3,8 +3,7 @@
 
 문제풀이 언어 : Python3.7
 
-2020-09-13 programmers 시작!
-2020-09-14 baekjoon 시작!
+[자세한 풀이 내용](https://velog.io/@sawol/series/algorithm)
 
 
 효율적으로 코딩하는 방법
