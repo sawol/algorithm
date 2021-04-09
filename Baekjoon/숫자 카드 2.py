@@ -1,5 +1,4 @@
 hash = {}
-cnt = 0
 N = int(input())
 s:list = list(map(int, input().split()))
 M = int(input())
