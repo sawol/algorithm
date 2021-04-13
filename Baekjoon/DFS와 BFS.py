@@ -8,13 +8,10 @@ for _ in range(M):
     graph[b].append(a)
 
 def dfs(v, discovered=[]):
-    stack = [v]
-    while stack:
-        x = stack.pop()
-        if not x in discovered:
-            discovered.append(x)
-            for i in sorted(graph[x], reverse = True):
-                stack.append(i)
+    discovered.append(v)
+    for w in sorted(graph[v]):
+        if not w in discovered:
+            discovered = dfs(w, discovered)
     return discovered
 
 def bfs(v):
