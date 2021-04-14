@@ -8,10 +8,14 @@ for _ in range(num_coms):
     graph[com_a].append(com_b)
     graph[com_b].append(com_a)
   
-def recursive_dfs(v, discovered=[]):
-    discovered.append(v)
-    for w in graph[v]:
-        if not w in discovered:
-            recursive_dfs(w, discovered)
+def stack_dfs(v):
+    discovered = []
+    stack = [v]
+    while stack:
+        x = stack.pop()
+        if not x in discovered:
+            discovered.append(x)
+            for w in graph[x]:
+                stack.append(w)
     return len(discovered)
-print(recursive_dfs(1)-1)
+print(stack_dfs(1)-1)
