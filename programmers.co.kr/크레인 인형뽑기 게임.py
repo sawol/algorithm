@@ -1,19 +1,15 @@
-def solution(board:list, moves:list) -> int:
-    basket = []
-    result = 0
+def solution(board, moves):
+    answer = 0
+    stack, new_b = [], []
+    y:int = len(board)
+    for i in range(y):
+        new_b.append([b[i] for b in board if b[i]])
     for move in moves:
-        for i in range(0, len(board)):
-            dolls = board[i]
-            if dolls[move-1] == 0:
-                pass
+        if new_b[move-1]:
+            toy = new_b[move-1].pop(0)
+            if stack and toy == stack[-1]:
+                stack.pop()
+                answer += 2
             else:
-                basket.append(dolls[move-1])
-                dolls[move-1] = 0
-                if len(basket) > 1 and basket[-2] == basket[-1]:
-                    basket.pop()
-                    basket.pop()
-                    result += 2
-                    break
-                else:
-                    break
-    return result
+                stack.append(toy)
+    return answer
