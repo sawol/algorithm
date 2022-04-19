@@ -1,3 +1,4 @@
-import sys
-_, *m = map(int, sys.stdin.read().split())
-print(min(m), max(m))
+n = int(input())
+arr = list(map(int, input().split()))
+arr.sort()
+print(arr[0], arr[-1], sep=' ')
